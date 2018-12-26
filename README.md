@@ -4,6 +4,7 @@ A simple tool for naming new suburbs in the Chicagoland area
 
 ## TODO:
 
+- js link
 - add boostrap
 - dedupe name generation
   - keep running set of generated names

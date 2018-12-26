@@ -37,12 +37,10 @@
     </div>
     <script>
         // <![CDATA[
-        const first_names = ['Oak', 'Forest', 'North', 'Western', 'Southern', 'Glen', 'Wooded', 'Green', 'Deer', 'River'];
+        const first_names = ['Oak', 'Forest', 'North', 'Western', 'Southern', 'Glen', 'Wooded', 'Green', 'Deer', 'River', 'Prairie', 'Lake', 'Indian'];
         const last_names = ['Park', 'Woods', 'Stream', 'Dale', 'Hills', 'Grove', 'Springs', 'Lake', 'Field', 'Ellyn', 'View', 'Brook', 'Forest', 'Estates', 'Ridge', 'Bluff'];
         const suburb_name_el = document.getElementById('suburb_name');
         const update_name= document.getElementById('update_name');
-
-        console.log(suburb_name_el);
 
         function getRandomName(arr) {
           let idx = Math.floor(Math.random() * Math.floor(arr.length));
@@ -50,12 +48,24 @@
         }
 
         function newName() {
-            return getRandomName(first_names) + " " + getRandomName(last_names);
+            first_name = getRandomName(first_names)
+            last_name = getRandomName(last_names)
+            // don't repeat the same word
+            if (first_name !== last_name) {
+                return getRandomName(first_names) + " " + getRandomName(last_names);
+            } else {
+                return newName();
+            }
         }
 
         function updateName(e) {
-            console.log(suburb_name.innerHTML);
-            suburb_name_el.innerHTML = newName();
+            name = newName();
+            // gaurantee name is new
+            if (name !== suburb_name_el.innerHTML) {
+                suburb_name_el.innerHTML = newName();
+            } else {
+                updateName();
+            }
         }
         updateName();
         update_name.onclick = updateName;
