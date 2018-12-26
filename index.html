@@ -1,9 +1,40 @@
-<head></head>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
 <body>
-    <h1>Your New Suburb will be called</h1>
-    <button id="update_name">Generate New Name</button>
-    <h2 id="suburb_name"></h2>
-
+    <div
+      style="background-image: url(https://siepmannrealty.com/wp-content/uploads/Trestle-Creek-Subdivision-Slider_0004_DJI_0001.jpg);
+             height: 100%;
+             background-position: center;
+             background-repeat: no-repeat;
+             background-size: cover;
+             color: white;
+             text-shadow: 2px 2px 15px dimgrey;
+             filter: blur(8px);
+             -webkit-filter: blur(8px);
+             z-index:0;
+             ">
+    </div>
+    <div 
+        class="jumbotron text-center"
+        style="z-index: 2;
+               background-color: rgb(0,0,0)
+               color: white;
+               font-weight: bold;
+               border: 3px solid #f1f1f1;
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               z-index: 2;
+               width: 80%;
+               padding: 20px;
+               text-align: center;
+        ">
+        <h2 align="center">Your new Chicagoland Suburb will be called</h2>
+        <h1 align="center" id="suburb_name"></h1>
+        <p align="center"><button class="btn" id="update_name">Generate New Name</button></p>
+    </div>
     <script>
         // <![CDATA[
         const first_names = ['Oak', 'Forest', 'North', 'Western', 'Southern', 'Glen', 'Wooded', 'Green', 'Deer', 'River'];
