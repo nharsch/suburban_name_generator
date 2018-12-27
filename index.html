@@ -52,7 +52,7 @@
             last_name = getRandomName(last_names)
             // don't repeat the same word
             if (first_name !== last_name) {
-                return getRandomName(first_names) + " " + getRandomName(last_names);
+                return first_name + " " + last_name;
             } else {
                 return newName();
             }
